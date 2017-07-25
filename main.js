@@ -12,15 +12,20 @@ console.log(r);
 //This sets computer to paper, rock, or scissors based on the random int.
 var computer;
 
-if (r === 1){
+switch (r){
+  case 1:
   computer = 'paper';
+  break;
+  case 2:
+  computer = 'rock';
+  break;
+  case 3:
+  computer = 'scissors';
+  break;
+  default:
+  console.log("r doesn't equal 1,2, or 3.");
 }
-else if (r === 2){
-  computer = 'rock'
-}
-else{
-  computer = 'scissors'
-}
+
 
 console.log("Computer chose " + computer);
 
