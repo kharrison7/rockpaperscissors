@@ -1,18 +1,80 @@
 
-// Demonstrates how to run a function and how to loop through an array of values.
+
 
 function rps(){
-let names = ["Frank", "Mark", "Monica"];
-let text = "";
-let i;
+
+//This makes a random int 1-3.
+let r = Math.floor((Math.random() * 3) + 1);
 
 
-function hellos(name){
-  console.log('Good morning ' + name + ', how are you doing today?');
+console.log(r);
+
+//This sets computer to paper, rock, or scissors based on the random int.
+var computer;
+
+
+//Orginal code not using switch.
+// if (r === 1){
+//   computer = 'paper';
+// }
+// else if (r === 2){
+//   computer = 'rock'
+// }
+// else{
+//   computer = 'scissors'
+// }
+
+switch (r){
+  case 1:
+  computer = 'paper';
+  break;
+  case 2:
+  computer = 'rock';
+  break;
+  case 3:
+  computer = 'scissors';
+  break;
+  default:
+  console.log("r doesn't equal 1,2, or 3.");
 }
 
-for (i = 0; i < names.length; i++) {
-    hellos(names[i]);
+
+console.log("Computer chose " + computer);
+
+
+
+
+//This lets you chose your move.
+let me = 'rock'; // Change this to test your code
+
+console.log("I choose " + me + ". ")
+
+
+//This determines who won, lost, and tied.
+if (computer === me){
+  console.log("Looks like a tie!");
 }
+  else if (r === 2 && me === 'paper'){
+    console.log("I win!");
+  }
+  else if (r === 2 && me === 'scissors'){
+    console.log("Computer wins!");
+  }
+
+  else if (r === 1 && me === 'scissors'){
+    console.log("I win!");
+  }
+  else if (r === 1 && me === 'rock'){
+    console.log("Computer wins!");
+  }
+
+  else if (r === 3 && me === 'rock'){
+    console.log("I win!");
+  }
+  else if (r === 3 && me === 'paper'){
+    console.log("Computer wins!");
+  }
 
 }
+
+//Console appears when you click inspect and then console.
