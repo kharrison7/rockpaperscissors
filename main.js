@@ -12,6 +12,18 @@ console.log(r);
 //This sets computer to paper, rock, or scissors based on the random int.
 var computer;
 
+
+//Orginal code not using switch.
+// if (r === 1){
+//   computer = 'paper';
+// }
+// else if (r === 2){
+//   computer = 'rock'
+// }
+// else{
+//   computer = 'scissors'
+// }
+
 switch (r){
   case 1:
   computer = 'paper';
