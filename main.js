@@ -3,12 +3,13 @@
 
 function rps(){
 
-//
+//This makes a random int 1-3.
 let r = Math.floor((Math.random() * 3) + 1);
 
 
 console.log(r);
 
+//This sets computer to paper, rock, or scissors based on the random int.
 var computer;
 
 if (r === 1){
@@ -26,12 +27,13 @@ console.log("Computer chose " + computer);
 
 
 
-
+//This lets you chose your move.
 let me = 'rock'; // Change this to test your code
 
 console.log("I choose " + me + ". ")
 
 
+//This determines who won, lost, and tied.
 if (computer === me){
   console.log("Looks like a tie!");
 }
@@ -57,3 +59,5 @@ if (computer === me){
   }
 
 }
+
+//Console appears when you click inspect and then console.
